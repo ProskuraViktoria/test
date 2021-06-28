@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+
+struct River
+{
+    char name[15];
+    float lenght = 0;
+    float depth = 0;
+};
+
+int main()
+{
+    FILE* fin;
+    fin = fopen("rivers.txt", "r");
+    const int size = 12;
+    River mass[size];
+    for (int i = 0; i < size; i++)
+    {
+        fscanf(fin, "%s%f%f", &mass[i].name, &mass[i].lenght, &mass[i].depth);
+    }
+    printf("|NAMES|  |LENGHT|  |DEPTH|\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%s ", mass[i].name);
+        printf("%f ", mass[i].lenght);
+        printf("%f\n", mass[i].depth);
+
+    }
+    printf("\nSum of river`s length, that has depth > 50\n");
+    double sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (mass[i].depth > 50) {
+            sum += mass[i].lenght;
+        }
+    }
+    printf("\n%f", sum);
+}
