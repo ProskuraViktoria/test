@@ -1,0 +1,12 @@
+River1 120 3.3
+River2 220 57.3
+River3 320 63.4
+River4 425 2.3
+River5 150 93.3
+River6 163 3.3
+River7 177 3.4
+River8 820 37.3
+River9 320 3.2
+River10 320 54.3
+River11 222 3.3
+River12 882 65.3
